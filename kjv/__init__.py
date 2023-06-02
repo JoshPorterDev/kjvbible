@@ -20,4 +20,8 @@ def create_app(test_config=None):
     except OSError:
         pass
 
+    from . import bible
+
+    app.register_blueprint(bible.bp)
+
     return app
