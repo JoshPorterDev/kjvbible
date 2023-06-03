@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>
-    <div>
+<div class="testaments">
+    <div class="testament">
         <h1>Old Testament</h1>
-        <ul>
+        <ul class="ul">
             {% for book in old_testament %}
-            <li><a href="/{{old_testament[book].url}}">{{ old_testament[book].book }}</a></li>
+            <li><a class="link" href="/{{old_testament[book].url}}">{{ old_testament[book].book }}</a></li>
             {% endfor %}
         </ul>
     </div>
-    <div>
+    <div class="testament">
         <h1>Old Testament</h1>
-        <ul>
+        <ul class="ul">
             {% for book in new_testament %}
-            <li><a href="/{{new_testament[book].url}}">{{ new_testament[book].book }}</a></li>
+            <li><a class="link" href="/{{new_testament[book].url}}">{{ new_testament[book].book }}</a></li>
             {% endfor %}
         </ul>
     </div>

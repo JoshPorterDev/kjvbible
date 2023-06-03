@@ -33,7 +33,9 @@ def index():
 def book(book):
     target = get_book_meta_data(book)
     if target is not None:
-        return render_template("bible/book.html", book=target)
+        return render_template(
+            "bible/book.html", book=target, title=f"Bible - {target.get('book')}"
+        )
 
     if target is None:
         abort(404, f"Book: {book} does not exist.")
@@ -58,5 +60,9 @@ def chapter(book, chapter):
 
     if target is not None:
         return render_template(
-            "bible/chapter.html", book=target, chapter=chapter, verses=verses
+            "bible/chapter.html",
+            book=target,
+            chapter=chapter,
+            verses=verses,
+            title=f"Bible - {target.get('book')} {chapter}",
         )

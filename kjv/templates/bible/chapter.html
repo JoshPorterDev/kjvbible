@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Book</h1>
-<h3>Chapter</h3>
-<a href="{{ url_for('bible.book', book=book.url)}}">back to {{book.book}}</a>
+<h1>{{ book.book }}</h1>
+<h3>Chapter {{ chapter }}</h3>
+<a class="link" href="{{ url_for('bible.book', book=book.url)}}">back to {{book.book}}</a>
 
 {% for v in verses %}
 <p><span>{{v['v']}}</span> {{v['t']}}</p>
 {% endfor %}
 
-<div>
+<div class="previous-and-next">
     {% if chapter > 1 %}
-        <a href="{{url_for('bible.chapter', book=book.url, chapter=chapter - 1)}}">Previous chapter</a>
+        <a class="link" href="{{url_for('bible.chapter', book=book.url, chapter=chapter - 1)}}">Previous chapter</a>
     {% endif %}
     {% if chapter < book.chapters %}
-        <a href="{{url_for('bible.chapter', book=book.url, chapter=chapter + 1)}}">Next chapter</a>
+        <a class="link" href="{{url_for('bible.chapter', book=book.url, chapter=chapter + 1)}}">Next chapter</a>
     {% endif %}
 </div>
 {% endblock %}

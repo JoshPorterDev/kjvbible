@@ -1,0 +1,92 @@
+html, body {
+    padding: 0px;
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.heading-h1 {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    height: 2.5rem;
+    padding: 20px;
+    background-color: #222023;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    list-style: none;
+}
+.main {
+    flex-grow: 1;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    min-height: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.testaments {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chapter-grid {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 20px;
+}
+
+.ul {
+    list-style: none;
+}
+
+ .previous-and-next {
+    display: flex;
+    justify-content: space-around;
+ }
+
+ .previous-and-next a {
+     display: inline-flex;
+     margin-top: 30px;
+ }
+
+ .link {
+     color: black;
+ }
+
+ footer {
+     background-color: #232023;
+     color: white;
+     height: 2.5rem;
+     padding: 20px;
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+     bottom: 0;
+     flex-shrink: 0;
+ }
+
+ footer a {
+     color: white;
+     text-align: center;
+ }

@@ -3,9 +3,9 @@
 {% block content %}
 <h1>{{book.book}}</h1>
 
-<ul>
+<ul class="chapter-grid ul">
     {% for chapter in range(1, book.chapters + 1) %}
-    <li><a href="{{ url_for('bible.chapter', book=book.url, chapter=chapter)}}">{{chapter}}</a></li>
+    <li><a class="link" href="{{ url_for('bible.chapter', book=book.url, chapter=chapter)}}">{{chapter}}</a></li>
     {% endfor %}
 </ul>
 {% endblock %}

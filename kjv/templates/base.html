@@ -2,18 +2,23 @@
 
 <head>
     <meta charset="UTF-8">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
     <title>Bible</title>
+    {% endif %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
-    <div>
-        <div>
+    <div class="wrapper">
+        <div class="content">
             <nav>
-                <h1>
-                    <a href="{{ url_for('bible.index') }}">Bible</a>
+                <h1 class="heading-h1">
+                    <a class="heading-h1" href="{{ url_for('bible.index') }}">Bible</a>
                 </h1>
             </nav>
-            <div>
+            <div class="main">
                 {% block content %}
                 {% endblock %}
             </div>
