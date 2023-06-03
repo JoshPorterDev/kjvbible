@@ -20,6 +20,8 @@ def create_app(test_config=None):
     except OSError:
         pass
 
+    from .meta import old_testament, new_testament
+
     from . import db
 
     db.init_app(app)

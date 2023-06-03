@@ -4,6 +4,8 @@ bp = Blueprint("bible", __name__)
 
 from kjv.db import get_db
 
+from .meta import old_testament, new_testament
+
 
 @bp.route("/")
 def index():
