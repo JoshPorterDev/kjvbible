@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bible</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <nav>
+                <h1>
+                    <a href="{{ url_for('bible.index') }}">Bible</a>
+                </h1>
+            </nav>
+            <div>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+        <footer>
+            <a href="https://kjvbible.xyz">kjvbible.xyz</a>
+            <a href="https://joshporter.xyz">joshporter.xyz</a>
+        </footer>
+    </div>
+</body>
+
+</html>
