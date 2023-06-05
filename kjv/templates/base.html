@@ -8,24 +8,24 @@
     <title>Bible</title>
     {% endif %}
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='bible.png') }}">
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="content">
-            <nav>
-                <h1 class="heading-h1">
-                    <a class="heading-h1" href="{{ url_for('bible.index') }}">Bible</a>
+    <div class="container">
+            <nav class="navigation">
+                <h1 class="navigation-heading">
+                    <a class="navigation-heading" href="{{ url_for('bible.index') }}">Bible</a>
                 </h1>
             </nav>
             <div class="main">
                 {% block content %}
                 {% endblock %}
             </div>
-        </div>
-        <footer>
-            <a href="https://kjvbible.xyz">kjvbible.xyz</a>
-            <a href="https://joshporter.xyz">joshporter.xyz</a>
+        <footer class="navigation">
+            <a class="navigation-heading" href="https://kjvbible.xyz">kjvbible.xyz</a>
+            <a class="navigation-heading" href="https://joshporter.xyz">joshporter.xyz</a>
         </footer>
     </div>
 </body>
